@@ -2,7 +2,7 @@
 
 This, my friends, is my common `.bash_profile`. It's a fun and friendly set of aliases, functions, and default options for your command line. You can add it to your home directory as `.bash_profile`, bur I'd suggest including it from your existing `.bash_profile` in a way that'll give you more freedom:
 
-    export SOURCECACHE="~/src"
+    export SOURCECACHE=~/src
     if [[ -f ${SOURCECACHE}/sidniciousrc/bash_profile ]]; then
     	. ${SOURCECACHE}/sidniciousrc/bash_profile
     fi
