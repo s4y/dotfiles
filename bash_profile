@@ -70,7 +70,7 @@ function mkcd {
 function rmwd {
 	if (shopt -s nullglob dotglob; f=(*); ((! ${#f[@]}))); then
 		# directory is empty
-		rmdir `"pwd"`
+		rmdir "`pwd`"
 		cd ..
 	else
 		echo "not empty"
