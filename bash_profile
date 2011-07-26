@@ -15,6 +15,7 @@ bind '"\[A": history-sarch-backward'
 bind '"\e[B": history-search-forward'
 
 # Application-specific aliases
+alias g=git
 if [[ -e /Applications/TextMate.app ]]; then
 	export VISUAL="mate -w"
 	alias m="mate ."
