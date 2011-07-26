@@ -1,4 +1,4 @@
-export PATH=~/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Developer/Tools:$PATH
+export PATH=~/bin:$PATH
 export MANPATH=/opt/local/share/man:$MANPATH
 export CLICOLOR=1
 export LSCOLORS=Cxfxcxdxbxcedeabagacad
