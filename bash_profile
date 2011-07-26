@@ -1,5 +1,6 @@
 export PATH=~/bin:$PATH
 export MANPATH=/opt/local/share/man:$MANPATH
+export CDPATH=$SOURCECACHE:$CDPATH
 export CLICOLOR=1
 export LSCOLORS=Cxfxcxdxbxcedeabagacad
 # Omit commands beginning with a space from command history. Useful for command lines with passwords.
