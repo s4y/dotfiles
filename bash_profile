@@ -11,7 +11,7 @@ export PS1="\[\e[${PROMPT_COLOR:-47;1;30}m\]\u@\h [\W] \!\[\e[${ORNAMENT_COLOR:-
 # YOUR ENJOYMENT MAY VARY
 # When scanning through command history, show only command lines which began with the already-typed characters.
 # This may taste better in your .inputrc file, just remove `bind` and the single quotes
-bind '"\[A": history-sarch-backward'
+bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
 # Application-specific aliases
