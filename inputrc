@@ -1,0 +1,5 @@
+# YOUR ENJOYMENT MAY VARY
+# When scanning through command history, show only command lines which began with the already-typed characters.
+# This may taste better in your .inputrc file, just remove `bind` and the single quotes
+"\e[A": history-search-backward
+"\e[B": history-search-forward
