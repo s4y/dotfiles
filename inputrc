@@ -3,3 +3,12 @@
 # This may taste better in your .inputrc file, just remove `bind` and the single quotes
 "\e[A": history-search-backward
 "\e[B": history-search-forward
+
+
+# [Thanks, metellius!](http://redd.it/kbeoe)
+set completion-ignore-case on
+set completion-prefix-display-length 2
+Control-j: menu-complete
+Control-k: menu-complete-backward
+set show-all-if-ambiguous on
+set show-all-if-unmodified on

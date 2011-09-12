@@ -29,5 +29,9 @@ Setting that `SOURCECACHE` variable to the location of your source code also unl
 ## inputrc
 
 - The up and down arrow keys only show history entries that begin with what you've typed so far
+- Case-insensitive completion
+- control+j/k scrolls through autocomplete choices
+- Autocomplete on the first press of tab
+- Hide the part of the name that all the autocomplete choices share
 
 Comments, complaints, and additions are welcome!
