@@ -26,6 +26,7 @@ set directory=~/.vim/backup
 if has("gui_running")
     set guioptions=egmrt
     set guifont=Consolas\ for\ BBEdit:h16
+	set guicursor=a:blinkon0
     " require vim 7.3
     set undofile
 endif
