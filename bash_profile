@@ -1,8 +1,8 @@
 export PATH=~/bin:$PATH
 export MANPATH=/opt/local/share/man:$MANPATH
-export CDPATH=$SOURCECACHE:$CDPATH
 export CLICOLOR=1
 export LSCOLORS=Cxfxcxdxbxcedeabagacad
+export EDITOR=vim
 # Omit commands beginning with a space from command history. Useful for command lines with passwords.
 export HISTIGNORE=" *"
 # When including this from a box-specific .bash_profile, set PROMPT_COLOR and ORNAMENT_COLOR at will
@@ -11,7 +11,6 @@ export PS1="\[\e[${PROMPT_COLOR:-47;1;30}m\]\u@\h [\W] \!\[\e[${ORNAMENT_COLOR:-
 # Application-specific aliases
 alias g=git
 if [[ -e /Applications/TextMate.app ]]; then
-	export VISUAL="mate -w"
 	alias m="mate ."
 fi
 # Mac-specific aliases
