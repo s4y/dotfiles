@@ -6,7 +6,10 @@ filetype plugin indent on
 colorscheme blackboard
 
 " Line wrapping
-set wrap linebreak nolist
+set nowrap linebreak nolist
+
+" Line numbering
+set number
 
 " Tabs
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
