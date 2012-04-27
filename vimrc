@@ -17,6 +17,11 @@ set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 " Status line
 set laststatus=2 statusline=[%c,%l]\ %y
 
+" Undo/backup files
+set backupdir=~/.vim/backup
+set directory=~/.vim/backup
+
+
 " MacVim
 if has("gui_running")
     set guioptions=egmrt
