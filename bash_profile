@@ -40,6 +40,22 @@ if [[ $SOURCECACHE ]]; then
 			cd ${SOURCECACHE}
 		fi
 	}
+
+	function pref {
+		if [ $# -ne 1 ]; then
+			echo "usage: pref preference_pane" >&2
+			return 1
+		fi
+		for lib in '/System/Library' '/Library' '~/Library'; do
+			pane="$lib/PreferencePanes/$1.prefPane"
+			if [[ -e $pane ]]; then
+				open "$pane"
+				return 0
+			fi
+		done
+		echo "No preference pane named “$1” found"
+		return 2
+	}
 fi
 
 # cl -- change to and list the contents of a directory. Arguments 2-n are passed to ls.
