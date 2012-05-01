@@ -1,6 +1,6 @@
 # .files
 
-Configuration files for command line programs I use — like `bash`.
+Configuration files for command line programs I use — like `bash`
 
 ## bash_profile
 
