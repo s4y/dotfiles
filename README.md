@@ -1,6 +1,6 @@
-## "This ain't JayvaScript!" / "It won't compile!" / "I'm scared!"
+# .files
 
-No worries. These are just my own personal configuration files for command line programs I use — like `bash`.
+Configuration files for command line programs I use — like `bash`.
 
 ## bash_profile
 
