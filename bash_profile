@@ -17,6 +17,22 @@ fi
 if command -v sw_vers >/dev/null && [[ `sw_vers -productName` == "Mac OS X" ]]; then
 	alias openports='sudo lsof -i -P | grep -i "listen"'
 	alias o='open .'
+
+	function pref {
+		if [ $# -ne 1 ]; then
+			echo "usage: pref preference_pane" >&2
+			return 1
+		fi
+		for lib in '/System/Library' '/Library' '~/Library'; do
+			pane="$lib/PreferencePanes/$1.prefPane"
+			if [[ -e $pane ]]; then
+				open "$pane"
+				return 0
+			fi
+		done
+		echo "No preference pane named “$1” found"
+		return 2
+	}
 fi
 
 alias sre="screen -xr"
@@ -39,22 +55,6 @@ if [[ $SOURCECACHE ]]; then
 		else
 			cd ${SOURCECACHE}
 		fi
-	}
-
-	function pref {
-		if [ $# -ne 1 ]; then
-			echo "usage: pref preference_pane" >&2
-			return 1
-		fi
-		for lib in '/System/Library' '/Library' '~/Library'; do
-			pane="$lib/PreferencePanes/$1.prefPane"
-			if [[ -e $pane ]]; then
-				open "$pane"
-				return 0
-			fi
-		done
-		echo "No preference pane named “$1” found"
-		return 2
 	}
 fi
 
