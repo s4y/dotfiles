@@ -11,6 +11,10 @@ set nowrap linebreak nolist
 " Line numbering
 set number
 
+" Nicer invisible characters (:set list)
+" From http://vimcasts.org/episodes/show-invisibles/
+set listchars=tab:▸\ ,eol:¬
+
 " Tabs
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 
