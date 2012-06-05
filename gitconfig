@@ -1,0 +1,24 @@
+[user]
+	email = s@sidneysm.com
+	name = Sidney San Martín
+[core]
+	excludesfile = /Users/sidtech/.gitignore
+	quotepath = false
+[alias]
+	st = status
+	ci = commit
+	br = branch
+	co = checkout
+	df = diff
+	lg = log -p
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	ls = ls-files
+[branch]
+	autosetuprebase = always
+[color]
+	ui
+[log]
+	messageWrap = true
+[push]
+	default = upstream
