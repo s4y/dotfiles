@@ -25,6 +25,9 @@ set laststatus=2 statusline=[%c,%l]\ %y
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
+" Mouse
+set mouse=a
+
 
 " MacVim
 if has("gui_running")
