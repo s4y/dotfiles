@@ -21,6 +21,9 @@ set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 " Status line
 set laststatus=2 statusline=[%c,%l]\ %y
 
+" Smart case sentitivity for searches
+set smartcase
+
 " Undo/backup files
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
