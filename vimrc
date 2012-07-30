@@ -19,7 +19,7 @@ set listchars=tab:▸\ ,eol:¬
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 
 " Status line
-set laststatus=2 statusline=[%c,%l]\ %y
+set laststatus=2 statusline=[%c,%l]\ %y\ %t
 
 " Smart case sentitivity for searches
 set ignorecase smartcase
