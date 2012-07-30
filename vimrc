@@ -35,8 +35,8 @@ set mouse=a
 " MacVim
 if has("gui_running")
     set guioptions=egmrt
-    set guifont=Consolas\ for\ BBEdit:h16
-	set guicursor=a:blinkon0
+    set guifont=Inconsolata\-g:h18
+    set guicursor=a:blinkon0
     " require vim 7.3
     set undofile
 endif
