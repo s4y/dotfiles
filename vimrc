@@ -1,5 +1,7 @@
 " Thanks to nicholasbs and omni5cience for parts of this
 
+set nocompatible
+
 call pathogen#infect()
 syntax on
 filetype plugin indent on
