@@ -127,3 +127,4 @@ function f(){
 		return 1
 	fi
 }
+HISTIGNORE="b:f:$HISTIGNORE"
