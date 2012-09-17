@@ -28,6 +28,7 @@ set ignorecase smartcase
 
 " Undo/backup files
 set backupdir=~/.vim/backup
+set undodir=~/.vim/backup
 set directory=~/.vim/backup
 
 " Mouse
