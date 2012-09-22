@@ -37,7 +37,7 @@ fi
 
 alias sre="screen -xr"
 alias l='ls -l'
-alias la='ls -la'
+alias la='ls -lA'
 alias ..='cd ..'
 
 # sc -- Jump to a project in your neighborhood source cache (usually ~/src/). SOURCECACHE must be set.
