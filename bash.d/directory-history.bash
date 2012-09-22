@@ -42,3 +42,4 @@ function f(){
 	fi
 }
 
+HISTIGNORE="b:f:$HISTIGNORE"

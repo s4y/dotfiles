@@ -86,8 +86,6 @@ function rmwd {
 	fi
 }
 
-HISTIGNORE="b:f:$HISTIGNORE"
-
 for file in "`dirname "${BASH_SOURCE[0]}"`"/bash.d/*; do
 	builtin source $file
 done
