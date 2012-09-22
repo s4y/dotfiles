@@ -105,6 +105,7 @@ function b(){
 		if builtin cd "${BACK_DIRS[0]}"; then
 			BACK_DIRS=("${BACK_DIRS[@]:1}")
 			FORWARD_DIRS=( "$dir" "${FORWARD_DIRS[@]}" )
+			builtin dirs +0
 		else
 			return $?
 		fi
@@ -119,6 +120,7 @@ function f(){
 		if builtin cd "${FORWARD_DIRS[0]}"; then
 			BACK_DIRS=( "$dir" "${BACK_DIRS[@]}")
 			FORWARD_DIRS=("${FORWARD_DIRS[@]:1}")
+			builtin dirs +0
 		else
 			return $?
 		fi
