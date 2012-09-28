@@ -44,24 +44,6 @@ alias l='ls -l'
 alias la='ls -lA'
 alias ..='cd ..'
 
-# sc -- Jump to a project in your neighborhood source cache (usually ~/src/). SOURCECACHE must be set.
-#   sc          # change directories to the root of the source cache
-#   sc project  # change directories to `project`. If `project` does not exist, equivalent to `sc` (with an error)
-if [[ $SOURCECACHE ]]; then
-	function sc {
-		if [[ -n $1 ]]; then
-			if [[ -d "${SOURCECACHE}/${1}" ]]; then
-				cd "${SOURCECACHE}/${1}"
-			else
-				cd ${SOURCECACHE}
-				echo -e "${1}: Not found" 1>&2
-			fi
-		else
-			cd ${SOURCECACHE}
-		fi
-	}
-fi
-
 # cl -- change to and list the contents of a directory. Arguments 2-n are passed to ls.
 function cl { cd $1; shift; ls $@; }
 
