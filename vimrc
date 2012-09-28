@@ -28,7 +28,9 @@ set ignorecase smartcase
 
 " Undo/backup files
 set backupdir=~/.vim/backup
-set undodir=~/.vim/backup
+if version >= 703
+    set undodir=~/.vim/backup
+endif
 set directory=~/.vim/backup
 
 " Mouse
@@ -50,6 +52,7 @@ if has("gui_running")
     set guioptions=egmrt
     set guifont=Inconsolata\-g:h18
     set guicursor=a:blinkon0
-    " require vim 7.3
-    set undofile
+    if version >= 703
+        set undofile
+    endif
 endif
