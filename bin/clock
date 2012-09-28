@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+bol=$(tput hpa 0)
+el=$(tput el)
+
+while :; do
+	echo -n "$bol`date`$ce"
+	sleep 1
+done

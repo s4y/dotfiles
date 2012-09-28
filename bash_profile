@@ -1,4 +1,6 @@
-export PATH=~/bin:$PATH
+DOTFILES=`dirname "${BASH_SOURCE[0]}"`
+
+export PATH="$DOTFILES"/bin:~/bin:$PATH
 export MANPATH=/opt/local/share/man:$MANPATH
 export CLICOLOR=1
 export LSCOLORS=Cxfxcxdxbxcedeabagacad
@@ -86,6 +88,6 @@ function rmwd {
 	fi
 }
 
-for file in "`dirname "${BASH_SOURCE[0]}"`"/bash.d/*; do
+for file in "$DOTFILES"/bash.d/*; do
 	builtin source $file
 done
