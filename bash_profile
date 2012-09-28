@@ -10,6 +10,8 @@ export HISTIGNORE=" *"
 # When including this from a box-specific .bash_profile, set PROMPT_COLOR and ORNAMENT_COLOR at will
 export PS1="\[\e[${PROMPT_COLOR:-47;1;30}m\]\u@\h [\W] \!\[\e[${ORNAMENT_COLOR:-0;32}m\]$\[\e[0m\] "
 
+set -o vi
+
 # Application-specific aliases
 alias g=git
 if [[ -e /Applications/TextMate.app ]]; then
