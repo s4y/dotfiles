@@ -1,3 +1,5 @@
+[[ -z $BASH_VERSION ]] && return # Only supports bash
+
 # Back and forward commands for cd
 
 BACK_DIRS=()

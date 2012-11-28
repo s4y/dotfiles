@@ -1,4 +1,8 @@
-DOTFILES=`dirname "${BASH_SOURCE[0]}"`
+if [[ -n $ZSH_VERSION ]]; then
+	DOTFILES=`dirname "$0"`
+elif [[ -n $BASH_VERSION ]]; then
+	DOTFILES=`dirname "${BASH_SOURCE[0]}"`
+fi
 
 export PATH="$DOTFILES"/bin:~/bin:$PATH
 export MANPATH=/opt/local/share/man:$MANPATH
@@ -7,8 +11,13 @@ export LSCOLORS=Cxfxcxdxbxcedeabagacad
 export EDITOR=vim
 # Omit commands beginning with a space from command history. Useful for command lines with passwords.
 export HISTIGNORE=" *"
-# When including this from a box-specific .bash_profile, set PROMPT_COLOR and ORNAMENT_COLOR at will
-export PS1="\[\e[${PROMPT_COLOR:-47;1;30}m\]\u@\h:\W \!\[\e[${ORNAMENT_COLOR:-0;32}m\]$\[\e[0m\] "
+
+if [[ -z $ZSH_VERSION ]]; then
+	# When including this from a box-specific .bash_profile, set PROMPT_COLOR and ORNAMENT_COLOR at will
+	export PS1="\[\e[${PROMPT_COLOR:-47;1;30}m\]\u@\h:\W \!\[\e[${ORNAMENT_COLOR:-0;32}m\]$\[\e[0m\] "
+elif [[ -z $BASH_VERSION ]]; then
+	export PROMPT='%{$bg[white]%}%{$fg_bold[black]%}%n@%m:%~ %!%{$reset_color%}%{$fg[green]%}\$%{$reset_color%} '
+fi
 
 set -o vi
 
