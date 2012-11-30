@@ -31,7 +31,6 @@ set backupdir=~/.vim/backup
 if version >= 703
     set undodir=~/.vim/backup
 endif
-set directory=~/.vim/backup
 
 " Mouse
 set mouse=a
