@@ -49,7 +49,7 @@ imap <right> <c-o><c-w>l
 " MacVim
 if has("gui_running")
     set guioptions=egmrt
-    set guifont=Inconsolata\-g:h18
+    set guifont=Source\ Code\ Pro:h11
     set guicursor=a:blinkon0
     if version >= 703
         set undofile
