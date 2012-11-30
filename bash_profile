@@ -16,7 +16,7 @@ export HISTIGNORE=" *"
 if [[ -n $ZSH_VERSION ]]; then
 	export PROMPT='%{$bg[white]%}%{$fg_bold[black]%}%n@%m:%~ %!%{$reset_color%}%{$fg[green]%}\$%{$reset_color%} '
 elif [[ -n $BASH_VERSION ]]; then
-	export PS1="\[\e[${PROMPT_COLOR:-47;1;30}m\]\u@\h:\W \!\[\e[${ORNAMENT_COLOR:-0;32}m\]$\[\e[0m\] "
+	PS1="\[\e[${PROMPT_COLOR:-48;5;17}m\]\h [\W]\[\e[0m\] \[\e[${ORNAMENT_COLOR:-0;32}m\]$\[\e[0m\] "
 fi
 
 set -o vi
