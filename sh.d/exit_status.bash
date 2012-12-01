@@ -8,6 +8,6 @@ if [[ -n $BASH_VERSION ]]; then
 
 elif [[ -n $ZSH_VERSION ]]; then
 
-	PROMPT='%(?..$fg[red]%?$reset_color )'"$PROMPT"
+	PROMPT=$'%(?..\e[0;31m%?\e[0;0m )'"$PROMPT"
 
 fi
