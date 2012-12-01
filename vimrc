@@ -16,6 +16,7 @@ set number
 " Nicer invisible characters (:set list)
 " From http://vimcasts.org/episodes/show-invisibles/
 set listchars=tab:▸\ ,eol:¬
+set list
 
 " Tabs
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
