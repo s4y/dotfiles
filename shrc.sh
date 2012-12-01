@@ -81,6 +81,6 @@ function rmwd {
 	fi
 }
 
-for file in "$DOTFILES"/bash.d/*; do
+for file in "$DOTFILES"/sh.d/*; do
 	builtin source $file
 done
