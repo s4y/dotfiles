@@ -15,7 +15,6 @@ export HISTIGNORE=" *"
 # When including this from a box-specific .bash_profile, set PROMPT_COLOR and ORNAMENT_COLOR at will
 if [[ -n $ZSH_VERSION ]]; then
 	PS1=$'%{\e'"[${PROMPT_COLOR:-48;5;17}m%}%m [%1~]"$'%{\e[0m%} %{\e'"[${ORNAMENT_COLOR:-0;32}m%}$"$'\e[0m '
-	# PS1='%{$bg[white]%}%{$fg_bold[black]%}%n@%m:%~ %!%{$reset_color%}%{$fg[green]%}\$%{$reset_color%} '
 elif [[ -n $BASH_VERSION ]]; then
 	PS1="\[\e[${PROMPT_COLOR:-48;5;17}m\]\h [\W]\[\e[0m\] \[\e[${ORNAMENT_COLOR:-0;32}m\]$\[\e[0m\] "
 fi
