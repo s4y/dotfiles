@@ -1,6 +1,7 @@
 " Thanks to nicholasbs and omni5cience for parts of this
 
 set nocompatible
+set shortmess+=I
 
 call pathogen#infect()
 syntax on
