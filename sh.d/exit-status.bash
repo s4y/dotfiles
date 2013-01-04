@@ -1,10 +1,6 @@
 if [[ -n $BASH_VERSION ]]; then
 
-	function print_exit_status {
-		local code="$?"
-		[[ $code -ne 0 ]] && echo -en "\033[31m$code \033[00m"
-	}
-	PROMPT_COMMAND=print_exit_status
+    PS1='$(code=$?; [[ $code != 0 ]] && echo "\[\e[31m\]$code \[\e[00m\]")'"$PS1"
 
 elif [[ -n $ZSH_VERSION ]]; then
 
