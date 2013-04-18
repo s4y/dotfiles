@@ -28,6 +28,10 @@ set laststatus=2 statusline=[%c,%l]\ %y\ %t\ %m
 " Smart case sentitivity for searches
 set ignorecase smartcase
 
+" Frieldlier split defaults
+set splitbelow
+set splitright
+
 " http://stackoverflow.com/a/526940/84745
 set wildmode=longest,list,full
 set wildmenu
