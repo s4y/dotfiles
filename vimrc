@@ -65,3 +65,15 @@ if has("gui_running")
         set undofile
     endif
 endif
+
+" Vundle
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle "vim-coffee-script"
+Bundle "bufexplorer.zip"
+
+filetype plugin indent on
+" /Vundle
