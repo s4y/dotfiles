@@ -72,13 +72,9 @@ function mkcd {
 
 # Remove the working directory, if empty
 function rmwd {
-	if (shopt -s nullglob dotglob; f=(*); ((! ${#f[@]}))); then
-		# directory is empty
-		rmdir "`pwd`"
-		cd ..
-	else
-		echo "not empty"
-	fi
+	local dir="$PWD"
+	cd ..
+	rmdir "$dir"
 }
 
 for file in "$DOTFILES"/sh.d/*; do
