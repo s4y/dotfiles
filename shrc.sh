@@ -28,7 +28,7 @@ if [[ -e /Applications/TextMate.app ]]; then
 fi
 # Mac-specific aliases
 if command -v sw_vers >/dev/null && [[ `sw_vers -productName` == "Mac OS X" ]]; then
-	alias openports='sudo lsof -i -P | grep -i "listen"'
+	alias openports='sudo lsof -i -P | grep LISTEN'
 	alias o='open .'
 
 	function pref {
