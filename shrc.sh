@@ -10,6 +10,7 @@ if [[ -n $ZSH_VERSION ]]; then
 	HISTFILE=~/.history
 	INC_APPEND_HISTORY=1
 	SHARE_HISTORY=1
+	zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 fi
 
 export PATH="$DOTFILES"/bin:~/bin:$PATH
