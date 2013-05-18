@@ -4,6 +4,14 @@ elif [[ -n $BASH_VERSION ]]; then
 	DOTFILES=`dirname "${BASH_SOURCE[0]}"`
 fi
 
+if [[ -n $ZSH_VERSION ]]; then
+	HISTSIZE=1000
+	SAVEHIST=1000
+	HISTFILE=~/.history
+	INC_APPEND_HISTORY=1
+	SHARE_HISTORY=1
+fi
+
 export PATH="$DOTFILES"/bin:~/bin:$PATH
 export MANPATH=/opt/local/share/man:$MANPATH
 export CLICOLOR=1
