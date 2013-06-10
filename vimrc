@@ -3,7 +3,6 @@
 set nocompatible
 set shortmess+=I
 
-call pathogen#infect()
 syntax on
 filetype plugin indent on
 colorscheme blackboard
