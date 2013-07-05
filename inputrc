@@ -11,3 +11,5 @@ Control-j: menu-complete
 Control-k: menu-complete-backward
 set show-all-if-ambiguous on
 set show-all-if-unmodified on
+
+set editing-mode vi
