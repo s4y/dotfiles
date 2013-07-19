@@ -10,9 +10,20 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'gmarik/vundle'
+
 Bundle "vim-coffee-script"
 Bundle "bufexplorer.zip"
 Bundle 'blackboard.vim'
+Bundle "repeat.vim"
+Bundle "xolox/vim-misc"
+Bundle "xolox/vim-session"
+Bundle "linediff.vim"
+Bundle "surround.vim"
+Bundle "commentary.vim"
+Bundle "fugitive.vim"
+Bundle "airblade/vim-gitgutter"
+Bundle "ctrlp.vim"
 
 filetype plugin indent on
 " /Vundle
