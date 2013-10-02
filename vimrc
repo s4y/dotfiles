@@ -82,8 +82,10 @@ inoremap <right> <c-o><c-w>l
 
 " Highlight searches, but make <esc> clear the highlights
 set hls
-nnoremap <silent> <leader><esc> :noh<cr>
+noremap <silent> <leader><esc> :noh<cr>
 
+noremap <silent> <leader>l :set list!<cr>
+set pastetoggle=<leader>p
 
 let g:session_autoload='no'
 
