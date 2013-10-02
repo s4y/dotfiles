@@ -79,6 +79,10 @@ inoremap <down>  <c-o><c-w>j
 inoremap <left>  <c-o><c-w>h
 inoremap <right> <c-o><c-w>l
 
+" Highlight searches, but make <esc> clear the highlights
+set hls
+nnoremap <silent> <leader><esc> :noh<cr>
+
 " MacVim
 if has("gui_running")
     set guioptions=egmrt
