@@ -70,14 +70,14 @@ set mouse=a
 
 " Shit just got real
 " Disable the arrow keys
-map <up>     <c-w>k
-map <down>   <c-w>j
-map <left>   <c-w>h
-map <right>  <c-w>l
-imap <up>    <c-o><c-w>k
-imap <down>  <c-o><c-w>j
-imap <left>  <c-o><c-w>h
-imap <right> <c-o><c-w>l
+noremap <up>     <c-w>k
+noremap <down>   <c-w>j
+noremap <left>   <c-w>h
+noremap <right>  <c-w>l
+inoremap <up>    <c-o><c-w>k
+inoremap <down>  <c-o><c-w>j
+inoremap <left>  <c-o><c-w>h
+inoremap <right> <c-o><c-w>l
 
 " MacVim
 if has("gui_running")
