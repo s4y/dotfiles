@@ -28,6 +28,7 @@ Bundle "ctrlp.vim"
 filetype plugin indent on
 " /Vundle
 "
+
 syntax on
 colorscheme blackboard
 
@@ -82,6 +83,9 @@ inoremap <right> <c-o><c-w>l
 " Highlight searches, but make <esc> clear the highlights
 set hls
 nnoremap <silent> <leader><esc> :noh<cr>
+
+
+let g:session_autoload='no'
 
 " MacVim
 if has("gui_running")
