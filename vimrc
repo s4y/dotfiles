@@ -7,30 +7,33 @@ set shortmess+=I
 " Vundle
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
-Bundle "vim-coffee-script"
-Bundle "bufexplorer.zip"
-Bundle 'blackboard.vim'
-Bundle "repeat.vim"
-Bundle "xolox/vim-misc"
-Bundle "xolox/vim-session"
-Bundle "linediff.vim"
-Bundle "surround.vim"
-Bundle "commentary.vim"
-Bundle "fugitive.vim"
-Bundle "airblade/vim-gitgutter"
-Bundle "ctrlp.vim"
+Plugin 'vim-coffee-script'
+Plugin 'bufexplorer.zip'
+Plugin 'blackboard.vim'
+Plugin 'repeat.vim'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-session'
+Plugin 'linediff.vim'
+Plugin 'surround.vim'
+Plugin 'commentary.vim'
+Plugin 'fugitive.vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'ctrlp.vim'
+Plugin 'Cpp11-Syntax-Support'
 
-filetype plugin indent on
+call vundle#end()            " required
+filetype plugin indent on    " required
 " /Vundle
-"
 
 syntax on
 colorscheme blackboard
+
+au BufNewFile,BufRead *.cpp setf cpp11
 
 " Line wrapping
 set nowrap linebreak nolist
