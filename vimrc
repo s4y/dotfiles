@@ -101,3 +101,8 @@ if has("gui_running")
         set undofile
     endif
 endif
+
+" Stolen from omni5cience
+command! -nargs=? -complete=help Lhelp :
+	\ vertical topleft help <args> |
+	\ vertical resize 80
