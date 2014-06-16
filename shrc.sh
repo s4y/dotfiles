@@ -61,6 +61,9 @@ alias sre="screen -xr"
 alias l='ls -l'
 alias la='ls -lA'
 alias ..='cd ..'
+alias jeorbs=jobs
+alias wow='git status'
+alias gogogo='git commit -v'
 
 # cl -- change to and list the contents of a directory. Arguments 2-n are passed to ls.
 function cl { cd $1; shift; ls $@; }
