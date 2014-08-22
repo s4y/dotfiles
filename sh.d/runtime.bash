@@ -18,6 +18,7 @@ precmd () {
 PROMPT_COMMAND="precmd"
 
 if [[ -n $BASH_VERSION ]]; then
+    # http://superuser.com/a/175802/4096
     preexec_invoke_exec () {
         [ -n "$COMP_LINE" ] && return  # do nothing if completing
         [ "$BASH_COMMAND" = "$PROMPT_COMMAND" ] && return # don't cause a preexec for $PROMPT_COMMAND
