@@ -2,7 +2,7 @@
 	email = s@sidneysm.com
 	name = Sidney San Martín
 [core]
-	excludesfile = /Users/sidtech/.gitignore
+	excludesfile = /Users/sidney/.gitignore
 	quotepath = false
 [alias]
 	st = status
