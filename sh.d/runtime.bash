@@ -10,8 +10,10 @@ preexec () {
 
 precmd () {
     [[ -z $LAST_START_TIME ]] && return
-    echo
-    echo -e "\e[90m$(($(mstime)-$LAST_START_TIME))\e[0m"
+    local runtime="$(($(mstime)-$LAST_START_TIME))"
+    if [[ $runtime -gt 100 ]]; then
+        echo -e "\e[90m$runtime\e[0m"
+    fi
     unset LAST_START_TIME
 }
 
