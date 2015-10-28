@@ -2,15 +2,9 @@
 	excludesfile = ~/.gitignore
 	quotepath = false
 [alias]
-	st = status
-	ci = commit
-	br = branch
-	co = checkout
-	df = diff
-	lg = log -p
-	lol = log --graph --decorate --pretty=oneline --abbrev-commit
-	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-	ls = ls-files
+	logp = log -p
+	sync = !git fetch && git rebase
+	bow = !br="$(git rev-parse --abbrev-ref HEAD)" && git checkout master && git branch -d "$br"
 [branch]
 	autosetuprebase = always
 [color]
