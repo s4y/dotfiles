@@ -13,6 +13,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'vim-coffee-script'
+Plugin 'noc7c9/vim-iced-coffee-script'
 Plugin 'bufexplorer.zip'
 Plugin 'blackboard.vim'
 Plugin 'repeat.vim'
@@ -25,6 +26,12 @@ Plugin 'fugitive.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'ctrlp.vim'
 Plugin 'Cpp11-Syntax-Support'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'fatih/vim-go'
+Plugin 'suan/vim-instant-markdown'
+Plugin 'reedes/vim-pencil'
+Plugin 'moll/vim-node'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -83,14 +90,22 @@ inoremap <down>  <c-o><c-w>j
 inoremap <left>  <c-o><c-w>h
 inoremap <right> <c-o><c-w>l
 
+" Make * and # respect smartcase
+nnoremap <silent> * /\<<C-R>=expand('<cword>')<CR>\><CR>
+nnoremap <silent> # ?\<<C-R>=expand('<cword>')<CR>\><CR>
+
 " Highlight searches, but make <esc> clear the highlights
 set hls
 noremap <silent> <leader><esc> :noh<cr>
 
+noremap <silent> <leader>v :vnew<cr>
+noremap <silent> <leader>f gqip
+
 noremap <silent> <leader>l :set list!<cr>
 set pastetoggle=<leader>p
 
-let g:session_autoload='no'
+let g:session_autoload = 'no'
+let g:instant_markdown_slow = 1
 
 " MacVim
 if has("gui_running")
@@ -106,3 +121,9 @@ endif
 command! -nargs=? -complete=help Lhelp :
 	\ vertical topleft help <args> |
 	\ vertical resize 80
+
+
+" Stolen from oconnor663
+let g:EasyMotion_keys = "asdghklqwertyuiopzxcvbnmfj"  " get rid of ;
+let g:EasyMotion_do_mapping = 0
+map <Leader>w <Plug>(easymotion-bd-w)
