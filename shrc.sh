@@ -14,7 +14,6 @@ if [[ -n $ZSH_VERSION ]]; then
 fi
 
 export PATH=$PATH:"$DOTFILES"/bin:~/bin
-export MANPATH=/opt/local/share/man:$MANPATH
 export CLICOLOR=1
 export LSCOLORS=Cxfxcxdxbxcedeabagacad
 export EDITOR=vim
