@@ -12,8 +12,6 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'vim-coffee-script'
-Plugin 'noc7c9/vim-iced-coffee-script'
 Plugin 'bufexplorer.zip'
 Plugin 'blackboard.vim'
 Plugin 'repeat.vim'
@@ -25,13 +23,20 @@ Plugin 'commentary.vim'
 Plugin 'fugitive.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'ctrlp.vim'
-Plugin 'Cpp11-Syntax-Support'
+Plugin 'kana/vim-operator-user'
+Plugin 'rhysd/vim-clang-format'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'reedes/vim-pencil'
 Plugin 'easymotion/vim-easymotion'
+
+" Language support
+Plugin 'vim-coffee-script'
+Plugin 'noc7c9/vim-iced-coffee-script'
+Plugin 'Cpp11-Syntax-Support'
 Plugin 'fatih/vim-go'
 Plugin 'suan/vim-instant-markdown'
-Plugin 'reedes/vim-pencil'
 Plugin 'moll/vim-node'
+Plugin 'scrooloose/syntastic'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
