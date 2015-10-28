@@ -1,6 +1,3 @@
-[user]
-	email = s@sidneysm.com
-	name = Sidney San Martín
 [core]
 	excludesfile = /Users/sidney/.gitignore
 	quotepath = false
