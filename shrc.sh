@@ -38,12 +38,9 @@ fi
 
 set -o vi
 
-# Application-specific aliases
 alias g=git
-if [[ -e /Applications/TextMate.app ]]; then
-	alias m="mate ."
-fi
-# Mac-specific aliases
+
+# Mac-specific
 if command -v sw_vers >/dev/null && [[ `sw_vers -productName` == "Mac OS X" ]]; then
 	alias openports='sudo lsof -i -P | grep LISTEN'
 	alias o='open .'
