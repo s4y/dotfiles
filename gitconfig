@@ -1,5 +1,5 @@
 [core]
-	excludesfile = /Users/sidney/.gitignore
+	excludesfile = ~/.gitignore
 	quotepath = false
 [alias]
 	st = status
