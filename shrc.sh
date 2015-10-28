@@ -63,6 +63,7 @@ alias ..='cd ..'
 alias jeorbs=jobs
 alias wow='git status'
 alias okay='git commit -v'
+alias reload='. ~/.bashrc'
 
 # cl -- change to and list the contents of a directory. Arguments 2-n are passed to ls.
 function cl { cd $1; shift; ls $@; }
