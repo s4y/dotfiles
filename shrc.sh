@@ -5,12 +5,21 @@ elif [[ -n $BASH_VERSION ]]; then
 fi
 
 if [[ -n $ZSH_VERSION ]]; then
+	autoload -U compinit && compinit
 	HISTSIZE=1000
 	SAVEHIST=1000
 	HISTFILE=~/.history
 	INC_APPEND_HISTORY=1
 	SHARE_HISTORY=1
 	zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+	# Thanks, https://coderwall.com/p/jpj_6q
+	autoload -U up-line-or-beginning-search
+	autoload -U down-line-or-beginning-search
+	zle -N up-line-or-beginning-search
+	zle -N down-line-or-beginning-search
+	bindkey "^[[A" up-line-or-beginning-search # Up
+	bindkey "^[[B" down-line-or-beginning-search # Down
 fi
 
 export PATH=$PATH:"$DOTFILES"/bin:~/bin
