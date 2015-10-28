@@ -99,6 +99,9 @@ inoremap <right> <c-o><c-w>l
 nnoremap <silent> * /\<<C-R>=expand('<cword>')<CR>\><CR>
 nnoremap <silent> # ?\<<C-R>=expand('<cword>')<CR>\><CR>
 
+" Use jk to exit insert mode
+imap jk <Esc>
+
 " Highlight searches, but make <esc> clear the highlights
 set hls
 noremap <silent> <leader><esc> :noh<cr>
@@ -110,7 +113,18 @@ noremap <silent> <leader>l :set list!<cr>
 set pastetoggle=<leader>p
 
 let g:session_autoload = 'no'
+let g:session_autosave = 'no'
 let g:instant_markdown_slow = 1
+
+let g:syntastic_javascript_checkers = ['jshint']
+
+let g:clang_format#style_options = {
+	\ "Standard" : "C++11",
+	\ "UseTab" : "ForIndentation",
+	\ "TabWidth" : "4",
+	\ "AlignAfterOpenBracket" : "false"
+\ }
+
 
 " MacVim
 if has("gui_running")
