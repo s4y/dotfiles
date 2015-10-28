@@ -13,7 +13,7 @@ if [[ -n $ZSH_VERSION ]]; then
 	zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 fi
 
-export PATH="$DOTFILES"/bin:~/bin:$PATH
+export PATH=$PATH:"$DOTFILES"/bin:~/bin
 export MANPATH=/opt/local/share/man:$MANPATH
 export CLICOLOR=1
 export LSCOLORS=Cxfxcxdxbxcedeabagacad
