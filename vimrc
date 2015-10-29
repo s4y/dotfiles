@@ -3,44 +3,59 @@
 set nocompatible
 set shortmess+=I
 
+if has('vim_starting')
+	set rtp+=~/.vim/bundle/neobundle.vim
+endif
 
-" Vundle
-filetype off
+call neobundle#begin(expand('~/.vim/bundle/'))
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+NeoBundleFetch 'Shougo/neobundle.vim'
 
-Plugin 'gmarik/Vundle.vim'
+NeoBundle 'Shougo/vimproc.vim', {
+	\ 'build' : {
+	\     'windows' : 'tools\\update-dll-mingw',
+	\     'cygwin' : 'make -f make_cygwin.mak',
+	\     'mac' : 'make',
+	\     'linux' : 'make',
+	\     'unix' : 'gmake',
+	\    },
+	\ }
 
-Plugin 'bufexplorer.zip'
-Plugin 'blackboard.vim'
-Plugin 'repeat.vim'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-session'
-Plugin 'linediff.vim'
-Plugin 'surround.vim'
-Plugin 'commentary.vim'
-Plugin 'fugitive.vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'ctrlp.vim'
-Plugin 'kana/vim-operator-user'
-Plugin 'rhysd/vim-clang-format'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'reedes/vim-pencil'
-Plugin 'easymotion/vim-easymotion'
+NeoBundle 'vim-coffee-script'
+NeoBundle 'noc7c9/vim-iced-coffee-script'
+NeoBundle 'bufexplorer.zip'
+NeoBundle 'blackboard.vim'
+NeoBundle 'repeat.vim'
+NeoBundle 'xolox/vim-misc'
+NeoBundle 'xolox/vim-session'
+NeoBundle 'linediff.vim'
+NeoBundle 'surround.vim'
+NeoBundle 'commentary.vim'
+NeoBundle 'fugitive.vim'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'ctrlp.vim'
+NeoBundle 'Cpp11-Syntax-Support'
+NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'easymotion/vim-easymotion'
+NeoBundle 'fatih/vim-go'
+NeoBundle 'suan/vim-instant-markdown'
+NeoBundle 'reedes/vim-pencil'
+NeoBundle 'moll/vim-node'
+NeoBundle 'scrooloose/syntastic'
 
-" Language support
-Plugin 'vim-coffee-script'
-Plugin 'noc7c9/vim-iced-coffee-script'
-Plugin 'Cpp11-Syntax-Support'
-Plugin 'fatih/vim-go'
-Plugin 'suan/vim-instant-markdown'
-Plugin 'moll/vim-node'
-Plugin 'scrooloose/syntastic'
+NeoBundleLazy 'facebook/vim-flow', {
+	\ 'autoload': {
+	\     'filetypes': 'javascript'
+	\ },
+	\ 'build': {
+	\     'mac': 'npm install -g flow-bin',
+	\     'unix': 'npm install -g flow-bin'
+	\ }}
 
-call vundle#end()            " required
-filetype plugin indent on    " required
-" /Vundle
+
+call neobundle#end()
+filetype plugin indent on
+NeoBundleCheck
 
 syntax on
 colorscheme blackboard
