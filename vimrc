@@ -24,7 +24,7 @@ NeoBundle 'Shougo/vimproc.vim', {
 NeoBundle 'vim-coffee-script'
 NeoBundle 'noc7c9/vim-iced-coffee-script'
 NeoBundle 'bufexplorer.zip'
-NeoBundle 'blackboard.vim'
+NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'repeat.vim'
 NeoBundle 'xolox/vim-misc'
 NeoBundle 'xolox/vim-session'
@@ -58,7 +58,6 @@ filetype plugin indent on
 NeoBundleCheck
 
 syntax on
-colorscheme blackboard
 
 au BufNewFile,BufRead *.cpp setf cpp11
 
@@ -143,7 +142,10 @@ let g:clang_format#style_options = {
 
 " MacVim
 if has("gui_running")
-    set guioptions=egmrt
+	let g:solarized_visibility="low"
+	set bg=light
+	colorscheme solarized
+    set guioptions=e
     set guifont=Source\ Code\ Pro:h11
     set guicursor=a:blinkon0
     if version >= 703

@@ -33,7 +33,7 @@ export HISTIGNORE=" *"
 if [[ -n $ZSH_VERSION ]]; then
 	PS1=$'%{\e'"[${PROMPT_COLOR:-48;5;17}m%}%1~"$'%{\e[0m%}%{\e'"[${ORNAMENT_COLOR:-0;32}m%}:"$'%{\e[0m%} '
 elif [[ -n $BASH_VERSION ]]; then
-	PS1="\[\e[${PROMPT_COLOR:-48;5;17}m\]\W\[\e[0m\]\[\e[${ORNAMENT_COLOR:-0;32}m\]:\[\e[0m\] "
+	PS1="\[\e[${PROMPT_COLOR:-1;5;17}m\]\W\[\e[0m\]\[\e[${ORNAMENT_COLOR:-0;32}m\]:\[\e[0m\] "
 fi
 
 set -o vi
