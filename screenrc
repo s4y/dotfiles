@@ -1,0 +1,15 @@
+# escape ^aa
+startup_message off
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w"
+
+## detach on hangup
+autodetach on
+# bindkey ^[[1;3D prev
+# bindkey ^[[1;3C next
+# bindkey ^[a prev
+# bindkey ^[s next
+
+# bindkey ^@ copy
+defscrollback 10000
