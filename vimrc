@@ -43,16 +43,6 @@ NeoBundle 'reedes/vim-pencil'
 NeoBundle 'moll/vim-node'
 NeoBundle 'scrooloose/syntastic'
 
-NeoBundleLazy 'facebook/vim-flow', {
-	\ 'autoload': {
-	\     'filetypes': 'javascript'
-	\ },
-	\ 'build': {
-	\     'mac': 'npm install -g flow-bin',
-	\     'unix': 'npm install -g flow-bin'
-	\ }}
-
-
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
