@@ -90,6 +90,7 @@ set wildmode=longest,list,full
 set wildmenu
 
 " Undo/backup files
+set backupcopy=yes
 set backupdir=~/.vim/backup
 if version >= 703
     set undodir=~/.vim/backup
