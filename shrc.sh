@@ -22,6 +22,10 @@ if [[ -n $ZSH_VERSION ]]; then
 	bindkey "^[[B" down-line-or-beginning-search # Down
 fi
 
+# Opt out of Homebrew analytics:
+# https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Analytics.md
+HOMEBREW_NO_ANALYTICS=1
+
 export PATH=$PATH:"$DOTFILES"/bin:~/bin
 export CLICOLOR=1
 export LSCOLORS=Cxfxcxdxbxcedeabagacad
