@@ -42,6 +42,7 @@ NeoBundle 'fatih/vim-go'
 NeoBundle 'reedes/vim-pencil'
 NeoBundle 'moll/vim-node'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'Sidnicious/vim-lasso'
 
 call neobundle#end()
 filetype plugin indent on
