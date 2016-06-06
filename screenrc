@@ -1,3 +1,5 @@
+defutf8 on
+
 # escape ^aa
 startup_message off
 hardstatus on
