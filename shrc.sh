@@ -26,6 +26,10 @@ fi
 # https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
 
+# Opt out of CocoaPods analytics:
+# http://blog.cocoapods.org/Stats/
+export COCOAPODS_DISABLE_STATS=1
+
 export PATH=$PATH:"$DOTFILES"/bin:~/bin
 export CLICOLOR=1
 export LSCOLORS=Cxfxcxdxbxcedeabagacad
