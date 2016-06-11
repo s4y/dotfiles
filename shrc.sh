@@ -24,7 +24,7 @@ fi
 
 # Opt out of Homebrew analytics:
 # https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Analytics.md
-HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_ANALYTICS=1
 
 export PATH=$PATH:"$DOTFILES"/bin:~/bin
 export CLICOLOR=1
