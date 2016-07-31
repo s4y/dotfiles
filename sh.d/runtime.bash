@@ -14,7 +14,7 @@ precmd () {
     [[ -z $LAST_START_TIME ]] && return
     local runtime="$(($(mstime)-$LAST_START_TIME))"
     if [[ $runtime -gt 100 ]]; then
-        echo $'\e[90m'"$runtime"$'\e[0m'
+        echo $'\e[94m'"$runtime"$'\e[0m'
     fi
     unset LAST_START_TIME
 }
