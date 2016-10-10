@@ -127,6 +127,8 @@ noremap <silent> <leader>f gqip
 noremap <silent> <leader>l :set list!<cr>
 set pastetoggle=<leader>p
 
+let g:ycm_global_ycm_extra_conf = '~/src/dotfiles/ycm_extra_conf.py'
+
 let g:session_autoload = 'no'
 let g:session_autosave = 'no'
 let g:instant_markdown_slow = 1
