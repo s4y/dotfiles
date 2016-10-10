@@ -34,6 +34,7 @@ export PATH=$PATH:"$DOTFILES"/bin:~/bin
 export CLICOLOR=1
 export LSCOLORS=Cxfxcxdxbxcedeabagacad
 export EDITOR=vim
+export PAGER='less -SF'
 # Omit commands beginning with a space from command history. Useful for command lines with passwords.
 export HISTIGNORE=" *"
 
