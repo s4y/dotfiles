@@ -6,6 +6,8 @@
 	bow = !br="$(git rev-parse --abbrev-ref HEAD)" && git checkout master && git branch -d "$br"
 [color]
 	ui
+[grep]
+	lineNumber
 [log]
 	messageWrap = true
 [push]
