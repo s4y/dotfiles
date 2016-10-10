@@ -68,6 +68,9 @@ set list
 " Tabs
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 
+" Join lines with a single space, even after '.', '?', or '!'.
+set nojoinspaces
+
 " Status line
 set laststatus=2 statusline=[%c,%l]\ %y\ %t\ %m
 
@@ -107,6 +110,10 @@ inoremap <right> <c-o><c-w>l
 nnoremap <silent> * /\<<C-R>=expand('<cword>')<CR>\><CR>
 nnoremap <silent> # ?\<<C-R>=expand('<cword>')<CR>\><CR>
 
+" YouCompleteMe shortcuts (replaces ctags)
+nnoremap <C-]> :YcmCompleter GoTo<CR>
+" nnoremap <C-[> :YcmCompleter GoToDeclaration<CR>
+
 " Use jk to exit insert mode
 imap jk <Esc>
 
@@ -133,11 +140,11 @@ let g:clang_format#style_options = {
 	\ "AlignAfterOpenBracket" : "false"
 \ }
 
+set bg=dark
 
 " MacVim
 if has("gui_running")
 	let g:solarized_visibility="low"
-	set bg=light
 	colorscheme solarized
     set guioptions=e
     set guifont=Source\ Code\ Pro:h11
