@@ -22,6 +22,7 @@ NeoBundle 'Shougo/vimproc.vim', {
 	\ }
 
 NeoBundle 'vim-coffee-script'
+NeoBundle 'rhysd/vim-clang-format'
 NeoBundle 'noc7c9/vim-iced-coffee-script'
 NeoBundle 'bufexplorer.zip'
 NeoBundle 'altercation/vim-colors-solarized'
@@ -33,7 +34,7 @@ NeoBundle 'surround.vim'
 NeoBundle 'commentary.vim'
 NeoBundle 'fugitive.vim'
 NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'ctrlp.vim'
+NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'Cpp11-Syntax-Support'
 NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'easymotion/vim-easymotion'
@@ -42,6 +43,7 @@ NeoBundle 'fatih/vim-go'
 NeoBundle 'reedes/vim-pencil'
 NeoBundle 'moll/vim-node'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'derekwyatt/vim-fswitch'
 NeoBundle 'Sidnicious/vim-lasso'
 
 call neobundle#end()
