@@ -4,8 +4,6 @@
 	logp = log -p
 	sync = !git fetch && git rebase
 	bow = !br="$(git rev-parse --abbrev-ref HEAD)" && git checkout master && git branch -d "$br"
-[branch]
-	autosetuprebase = always
 [color]
 	ui
 [log]
