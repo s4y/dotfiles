@@ -1,17 +1,12 @@
 [core]
 	quotepath = false
 [alias]
-	logp = log -p
-	sync = !git fetch && git rebase
-	bow = !br="$(git rev-parse --abbrev-ref HEAD)" && git checkout master && git branch -d "$br"
-[color]
-	ui
+	# https://gist.github.com/datagrok/5080545
+	serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
 [grep]
 	lineNumber
 [log]
 	messageWrap = true
-[push]
-	default = upstream
 [pull]
 	rebase = true
 [rebase]
