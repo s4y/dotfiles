@@ -86,15 +86,10 @@ function cl { cd $1; shift; ls $@; }
 # mkcd -- create and change to a directory
 function mkcd {
 	if [ $# -ne 1 ]; then 
-		echo "usage: mkcd directory_name"
-	elif [ -d "${1}" ]; then
-		echo "(directory already existed)"
-		cd "$1"
-	elif [ -e "${1}" ]; then
-		echo "file exists"
-	else
-		mkdir "${1}" && cd "${1}"
+		echo "usage: mkcd directory_name" >&2
+		return 1
 	fi
+	mkdir -p "${1}" && cd "${1}"
 }
 
 # Remove the working directory, if empty
