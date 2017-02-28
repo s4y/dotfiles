@@ -6,22 +6,23 @@ mac_sdk_path = subprocess.check_output(
 ).strip()
 
 cppflags = [
-  '-std=c++11',
+  '-std=c++14',
   '-x', 'c++'
 ]
 
 objcflags = [
   '-isysroot', mac_sdk_path,
   '-I', mac_sdk_path + '/usr/local/include',
-  '-I', mac_sdk_path + '/System/Library/Frameworks',
+  '-framework', 'Foundation',
   # '-fmodules',
 ]
 
 per_extension_flags = {
   'cc': cppflags,
+  'cpp': cppflags,
+  'm': objcflags,
   'mm': cppflags + objcflags + [
     '-x', 'objective-c++',
-    '-framework', 'Foundation',
   ]
 }
 
@@ -31,7 +32,6 @@ def FlagsForFile(filename, **_kwargs):
     '-Wextra',
     '-Wpedantic',
     '-Werror',
-    '-std=c++11',
   ] + per_extension_flags.get(os.path.splitext(filename)[1][1:], [])
 
   return {
