@@ -73,8 +73,10 @@ set undodir=~/.vim/backup
 " Mouse
 set mouse=a
 
-" Shit just got real
-" Disable the arrow keys
+" Quicker timeout for multi-key mappings
+set timeoutlen=250
+
+" Arrow keys navigate splits.
 noremap <up>     <c-w>k
 noremap <down>   <c-w>j
 noremap <left>   <c-w>h
@@ -92,9 +94,14 @@ nnoremap <silent> # ?\<<C-R>=expand('<cword>')<CR>\><CR>
 nnoremap <C-]> :YcmCompleter GoTo<CR>
 " nnoremap <C-[> :YcmCompleter GoToDeclaration<CR>
 
-" Highlight searches, but make <esc> clear the highlights
+" Highlight searches
 set hls
-noremap <silent> <leader><esc> :noh<cr>
+
+" <Tab> clears the highlighted search.
+" <Tab><Tab> highlights the word under the cursor.
+" The complexity avoids delaying <Tab> by `timeoutlen`.
+noremap <script> <silent> <SID><Plug><Tab> :set hls<CR>:let @/="\\<<C-R>=expand('<cword>')<CR>\\>"<CR>:call histadd("/", @/)<CR>
+noremap <script> <silent> <Tab> :noh<CR><SID><Plug>
 
 noremap <silent> <leader>v :vnew<cr>
 noremap <silent> <leader>f gqip
