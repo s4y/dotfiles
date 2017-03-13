@@ -100,7 +100,7 @@ set hls
 " <Tab> clears the highlighted search.
 " <Tab><Tab> highlights the word under the cursor.
 " The complexity avoids delaying <Tab> by `timeoutlen`.
-noremap <script> <silent> <SID><Plug><Tab> :set hls<CR>:let @/="\\<<C-R>=expand('<cword>')<CR>\\>"<CR>:call histadd("/", @/)<CR>
+noremap <script> <silent> <SID><Plug><Tab> :let @/="\\<<C-R>=expand('<cword>')<CR>\\>"<CR>:call histadd("/", @/)<CR>:set hls<CR>
 noremap <script> <silent> <Tab> :noh<CR><SID><Plug>
 
 noremap <silent> <leader>v :vnew<cr>
