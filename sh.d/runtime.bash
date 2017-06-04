@@ -1,18 +1,14 @@
-mstime () {
-    python -c 'import time; print(int(time.time()*1000))'
-}
-
 preexec () {
     if [[ -z $1 ]]; then
         unset LAST_START_TIME
         return
     fi
-    LAST_START_TIME="`mstime`";
+    LAST_START_TIME="`msuptime`";
 }
 
 precmd () {
     [[ -z $LAST_START_TIME ]] && return
-    local runtime="$(($(mstime)-$LAST_START_TIME))"
+    local runtime="$(($(msuptime)-$LAST_START_TIME))"
     if [[ $runtime -gt 100 ]]; then
         echo $'\e[94m'"$runtime"$'\e[0m'
     fi
