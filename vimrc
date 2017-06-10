@@ -97,12 +97,6 @@ nnoremap <C-]> :YcmCompleter GoTo<CR>
 " Highlight searches
 set hls
 
-" <Tab> clears the highlighted search.
-" <Tab><Tab> highlights the word under the cursor.
-" The complexity avoids delaying <Tab> by `timeoutlen`.
-noremap <script> <silent> <SID><Plug><Tab> :let @/="\\<<C-R>=expand('<cword>')<CR>\\>"<CR>:call histadd("/", @/)<CR>:set hls<CR>
-noremap <script> <silent> <Tab> :noh<CR><SID><Plug>
-
 noremap <silent> <leader>v :vnew<cr>
 noremap <silent> <leader>f gqip
 
@@ -133,3 +127,5 @@ endif
 let g:EasyMotion_keys = "asdghklqwertyuiopzxcvbnmfj"  " get rid of ;
 let g:EasyMotion_do_mapping = 0
 map <Leader>w <Plug>(easymotion-bd-w)
+
+exe 'set rtp+=' . expand('<sfile>:h') . "/vim.d"
