@@ -65,11 +65,6 @@ set splitright
 set wildmode=longest,list,full
 set wildmenu
 
-" Undo/backup files
-set backupcopy=yes
-set backupdir=~/.vim/backup
-set undodir=~/.vim/backup
-
 " Mouse
 set mouse=a
 
@@ -120,7 +115,6 @@ if has("gui_running")
     set guioptions=e
     set guifont=Source\ Code\ Pro:h11
     set guicursor=a:blinkon0
-    set undofile
 endif
 
 " Stolen from oconnor663
