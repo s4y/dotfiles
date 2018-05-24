@@ -15,17 +15,14 @@ NeoBundle 'octol/vim-cpp-enhanced-highlight'
 NeoBundle 'Sidnicious/vim-lasso'
 NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'bufexplorer.zip'
 NeoBundle 'commentary.vim'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'easymotion/vim-easymotion'
+NeoBundle 'wincent/Command-T'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'fugitive.vim'
-NeoBundle 'moll/vim-node'
-NeoBundle 'reedes/vim-pencil'
 NeoBundle 'repeat.vim'
 NeoBundle 'surround.vim'
+NeoBundle 'NLKNguyen/papercolor-theme'
 
 call neobundle#end()
 filetype plugin indent on
@@ -81,7 +78,11 @@ inoremap <down>  <c-o><c-w>j
 inoremap <left>  <c-o><c-w>h
 inoremap <right> <c-o><c-w>l
 
-" Make * and # respect smartcase
+set autoindent
+set formatoptions+=n
+set formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*\\\|^-\ 
+
+" * and # respect smartcase
 nnoremap <silent> * /\<<C-R>=expand('<cword>')<CR>\><CR>
 nnoremap <silent> # ?\<<C-R>=expand('<cword>')<CR>\><CR>
 
@@ -92,8 +93,11 @@ nnoremap <C-]> :YcmCompleter GoTo<CR>
 " Highlight searches
 set hls
 
-noremap <silent> <leader>v :vnew<cr>
-noremap <silent> <leader>f gqip
+" Tab clears the current search highlight
+noremap <silent> <Tab> :noh<cr>
+
+" \f formats the current paragraph.
+noremap <silent> <leader>f gwap
 
 noremap <silent> <leader>l :set list!<cr>
 set pastetoggle=<leader>p
@@ -103,23 +107,14 @@ autocmd BufRead * let &l:modifiable = !&readonly
 
 let g:ycm_global_ycm_extra_conf = '~/src/dotfiles/ycm_extra_conf.py'
 
-let g:session_autoload = 'no'
-let g:session_autosave = 'no'
-
-set bg=dark
+set bg=light
+colorscheme PaperColor
 
 " MacVim
 if has("gui_running")
-	let g:solarized_visibility="low"
-	colorscheme solarized
-    set guioptions=e
-    set guifont=Source\ Code\ Pro:h11
-    set guicursor=a:blinkon0
+  set guioptions=e
+  set guifont=Source\ Code\ Variable\ Regular:h12
+  set guicursor=a:blinkon0
 endif
-
-" Stolen from oconnor663
-let g:EasyMotion_keys = "asdghklqwertyuiopzxcvbnmfj"  " get rid of ;
-let g:EasyMotion_do_mapping = 0
-map <Leader>w <Plug>(easymotion-bd-w)
 
 exe 'set rtp+=' . expand('<sfile>:h') . "/vim.d"
