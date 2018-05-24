@@ -20,8 +20,6 @@ NeoBundle 'commentary.vim'
 NeoBundle 'wincent/Command-T'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'fugitive.vim'
-NeoBundle 'repeat.vim'
-NeoBundle 'surround.vim'
 NeoBundle 'NLKNguyen/papercolor-theme'
 
 call neobundle#end()
