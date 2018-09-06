@@ -76,6 +76,10 @@ set autoindent
 set formatoptions+=n
 set formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*\\\|^-\ 
 
+" * and # respect case sensitivity.
+nnoremap <silent> * /\<<C-R>=expand('<cword>')<CR>\><CR>
+nnoremap <silent> # ?\<<C-R>=expand('<cword>')<CR>\><CR>
+
 " YouCompleteMe shortcuts
 nnoremap <C-]> :YcmCompleter GoTo<CR>
 nnoremap \| :YcmCompleter FixIt<cr>
