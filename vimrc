@@ -24,8 +24,6 @@ filetype plugin indent on
 
 syntax on
 
-au BufNewFile,BufRead *.cpp setf cpp11
-
 " Line wrapping
 set nowrap linebreak nolist
 
@@ -37,8 +35,8 @@ set number
 set listchars=tab:▸\ ,eol:¬
 set list
 
-" Tabs
-set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+" Two spaces. RIP tabs.
+set ts=2 sts=2 sw=2 expandtab
 
 " Join lines with a single space, even after '.', '?', or '!'.
 set nojoinspaces
@@ -46,21 +44,22 @@ set nojoinspaces
 " Status line
 set laststatus=2 statusline=[%c,%l]\ %y\ %t\ %m
 
-" Smart case sentitivity for searches
+" When searching, only be case sensitive if there's at least one uppercase
+" character in the search string.
 set ignorecase smartcase
 
-" Frieldlier split defaults
+" Split to the right by default.
 set splitright
 
 " http://stackoverflow.com/a/526940/84745
 set wildmode=longest,list,full
 set wildmenu
 
-" Mouse
+" Mouse support on.
 set mouse=a
 
-" Quicker timeout for multi-key mappings
-set timeoutlen=250
+" Quicker timeout for saving swap files, updating the gutter, etc.
+set updatetime=500
 
 " Arrow keys navigate splits.
 noremap <up>     <c-w>k
@@ -72,23 +71,19 @@ inoremap <down>  <c-o><c-w>j
 inoremap <left>  <c-o><c-w>h
 inoremap <right> <c-o><c-w>l
 
+" Auto indent (incl. while reformatting) in a way that's friendly to lists.
 set autoindent
 set formatoptions+=n
 set formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*\\\|^-\ 
 
-" * and # respect smartcase
-nnoremap <silent> * /\<<C-R>=expand('<cword>')<CR>\><CR>
-nnoremap <silent> # ?\<<C-R>=expand('<cword>')<CR>\><CR>
-
-" YouCompleteMe shortcuts (replaces ctags)
+" YouCompleteMe shortcuts
 nnoremap <C-]> :YcmCompleter GoTo<CR>
-" nnoremap <C-[> :YcmCompleter GoToDeclaration<CR>
 nnoremap \| :YcmCompleter FixIt<cr>
 
-" Highlight searches
+" Highlight search results.
 set hls
 
-" Tab clears the current search highlight
+" Tab clears the current search highlight.
 noremap <silent> <Tab> :noh<cr>
 
 " \f formats the current paragraph.
@@ -97,7 +92,7 @@ noremap <silent> <leader>f gwap
 noremap <silent> <leader>l :set list!<cr>
 set pastetoggle=<leader>p
 
-" Don't allow read only files to be modified
+" Don't allow read only files to be modified — it confuses me.
 autocmd BufRead * let &l:modifiable = !&readonly
 
 let g:ycm_global_ycm_extra_conf = '~/src/dotfiles/ycm_extra_conf.py'
@@ -105,7 +100,6 @@ let g:ycm_global_ycm_extra_conf = '~/src/dotfiles/ycm_extra_conf.py'
 set bg=light
 colorscheme PaperColor
 
-" MacVim
 if has("gui_running")
   set guioptions=e
   set guifont=Source\ Code\ Variable\ Regular:h12
