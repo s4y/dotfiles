@@ -83,6 +83,7 @@ nnoremap <silent> # ?\<<C-R>=expand('<cword>')<CR>\><CR>
 " YouCompleteMe shortcuts (replaces ctags)
 nnoremap <C-]> :YcmCompleter GoTo<CR>
 " nnoremap <C-[> :YcmCompleter GoToDeclaration<CR>
+nnoremap \| :YcmCompleter FixIt<cr>
 
 " Highlight searches
 set hls
@@ -110,5 +111,3 @@ if has("gui_running")
   set guifont=Source\ Code\ Variable\ Regular:h12
   set guicursor=a:blinkon0
 endif
-
-exe 'set rtp+=' . expand('<sfile>:h') . "/vim.d"
