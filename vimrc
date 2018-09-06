@@ -3,28 +3,24 @@
 set nocompatible
 set shortmess+=I
 
-if has('vim_starting')
-	set rtp+=~/.vim/bundle/neobundle.vim
-endif
+" To install:
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+"     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+call plug#begin('~/.vim/plugged')
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'Sidnicious/vim-lasso'
+Plug 'Valloric/YouCompleteMe'
+Plug 'airblade/vim-gitgutter'
+Plug 'vim-scripts/bufexplorer.zip'
+Plug 'vim-scripts/commentary.vim'
+Plug 'wincent/Command-T'
+Plug 'fatih/vim-go'
+Plug 'vim-scripts/fugitive.vim'
+Plug 'NLKNguyen/papercolor-theme'
 
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-NeoBundle 'octol/vim-cpp-enhanced-highlight'
-NeoBundle 'Sidnicious/vim-lasso'
-NeoBundle 'Valloric/YouCompleteMe'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'bufexplorer.zip'
-NeoBundle 'commentary.vim'
-NeoBundle 'wincent/Command-T'
-NeoBundle 'fatih/vim-go'
-NeoBundle 'fugitive.vim'
-NeoBundle 'NLKNguyen/papercolor-theme'
-
-call neobundle#end()
+call plug#end()
 filetype plugin indent on
-NeoBundleCheck
 
 syntax on
 
