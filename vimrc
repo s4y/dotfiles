@@ -87,8 +87,8 @@ nnoremap \| :YcmCompleter FixIt<cr>
 " Highlight search results.
 set hls
 
-" Tab clears the current search highlight.
-noremap <silent> <Tab> :noh<cr>
+" Return clears the current search highlight.
+nnoremap <silent> <cr> :noh<cr>
 
 " \f formats the current paragraph.
 noremap <silent> <leader>f gwap
@@ -98,6 +98,28 @@ set pastetoggle=<leader>p
 
 " Don't allow read only files to be modified — it confuses me.
 autocmd BufRead * let &l:modifiable = !&readonly
+
+function! s:JumpToCompanion()
+  let source_files = ['cc', 'cpp', 'c', 'mm', 'm']
+  let header_files = ['hh', 'hpp', 'h']
+  if index(source_files, expand('%:e')) != -1
+    let target_extensions = header_files
+  elseif index(header_files, expand('%:e')) != -1
+    let target_extensions = source_files
+  else
+    return
+  endif
+
+  for ext in target_extensions
+    let companion = expand('%:r') . '.' . ext
+    if filereadable(companion)
+      execute 'e '.fnameescape(companion)
+      break
+    endif
+  endfor
+endfun
+
+nnoremap <silent> <Tab> :call <sid>JumpToCompanion()<cr>
 
 let g:ycm_global_ycm_extra_conf = '~/src/dotfiles/ycm_extra_conf.py'
 
