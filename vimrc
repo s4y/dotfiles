@@ -91,9 +91,9 @@ set hls
 nnoremap <silent> <cr> :noh<cr>
 
 " \f formats the current paragraph.
-noremap <silent> <leader>f gwap
+nnoremap <silent> <leader>f gwap
 
-noremap <silent> <leader>l :set list!<cr>
+nnoremap <silent> <leader>l :set list!<cr>
 set pastetoggle=<leader>p
 
 " Don't allow read only files to be modified — it confuses me.
