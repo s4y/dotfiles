@@ -113,7 +113,11 @@ function! s:JumpToCompanion()
   for ext in target_extensions
     let companion = expand('%:r') . '.' . ext
     if filereadable(companion)
-      execute 'e '.fnameescape(companion)
+      if bufexists(companion)
+        execute 'b '.fnameescape(companion)
+      else
+        execute 'e '.fnameescape(companion)
+      endif
       break
     endif
   endfor
