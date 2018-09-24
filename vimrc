@@ -103,10 +103,6 @@ set pastetoggle=<leader>p
 " Don't allow read only files to be modified — it confuses me.
 autocmd BufRead * let &l:modifiable = !&readonly
 
-" https://stackoverflow.com/a/40992753/84745
-" Preserve cursor position on returning to a buffer.
-autocmd BufEnter * silent! normal! g`"
-
 function! s:JumpToCompanion()
   let source_files = ['cc', 'cpp', 'c', 'mm', 'm']
   let header_files = ['hh', 'hpp', 'h']
@@ -123,6 +119,8 @@ function! s:JumpToCompanion()
     if filereadable(companion)
       if bufexists(companion)
         execute 'b '.fnameescape(companion)
+        " Restore cursor position
+        execute "normal" 'g`"'
       else
         execute 'e '.fnameescape(companion)
       endif
