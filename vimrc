@@ -30,6 +30,10 @@ set nowrap linebreak nolist
 " Line numbering
 set number
 
+" Hide buffers instead of unloading when switching. Avoids losing state like
+" undo stack when switching files temporarily.
+set hidden
+
 " Nicer invisible characters (:set list)
 " From http://vimcasts.org/episodes/show-invisibles/
 set listchars=tab:▸\ ,eol:¬
