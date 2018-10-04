@@ -26,10 +26,6 @@ fi
 # https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
 
-# Opt out of CocoaPods analytics:
-# http://blog.cocoapods.org/Stats/
-export COCOAPODS_DISABLE_STATS=1
-
 export PATH=$PATH:"$DOTFILES"/bin:~/bin
 export CLICOLOR=1
 export LSCOLORS=Cxfxcxdxbxcedeabagacad
@@ -47,41 +43,18 @@ fi
 
 set -o vi
 
-alias g=git
-
 # Mac-specific
 if command -v sw_vers >/dev/null && [[ `sw_vers -productName` == "Mac OS X" ]]; then
 	alias openports='sudo lsof -i -P | grep LISTEN'
 	alias o='open .'
-
-	function pref {
-		if [ $# -ne 1 ]; then
-			echo "usage: pref preference_pane" >&2
-			return 1
-		fi
-		for lib in '/System/Library' '/Library' '~/Library'; do
-			pane="$lib/PreferencePanes/$1.prefPane"
-			if [[ -e $pane ]]; then
-				open "$pane"
-				return 0
-			fi
-		done
-		echo "No preference pane named “$1” found"
-		return 2
-	}
 fi
 
 alias sre="screen -xr"
 alias l='ls -l'
 alias la='ls -lA'
 alias ..='cd ..'
-alias jeorbs=jobs
 alias wow='git status'
-alias okay='git commit -v'
 alias reload='. ~/.bashrc'
-
-# cl -- change to and list the contents of a directory. Arguments 2-n are passed to ls.
-function cl { cd $1; shift; ls $@; }
 
 # mkcd -- create and change to a directory
 function mkcd {
