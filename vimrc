@@ -24,7 +24,7 @@ filetype plugin indent on
 syntax on
 
 " Line wrapping
-set nowrap linebreak nolist
+set nowrap linebreak
 
 " Line numbering
 set number
@@ -36,7 +36,6 @@ set hidden
 " Nicer invisible characters (:set list)
 " From http://vimcasts.org/episodes/show-invisibles/
 set listchars=tab:▸\ ,eol:¬
-set list
 
 " Two spaces. RIP tabs.
 set ts=2 sts=2 sw=2 expandtab
@@ -91,7 +90,7 @@ nnoremap \| :YcmCompleter FixIt<cr>
 set hls
 
 " Return clears the current search highlight.
-nnoremap <silent> <cr> :noh<cr>
+nnoremap <silent> <Tab> :noh<cr>
 
 " \f formats the current paragraph.
 nnoremap <silent> <leader>f gwap
@@ -128,7 +127,7 @@ function! s:JumpToCompanion()
   endfor
 endfun
 
-nnoremap <silent> <Tab> :call <sid>JumpToCompanion()<cr>
+nnoremap <silent> <cr> :call <sid>JumpToCompanion()<cr>
 
 let g:ycm_global_ycm_extra_conf = '~/src/dotfiles/ycm_extra_conf.py'
 
