@@ -11,9 +11,6 @@ cppflags = [
 ]
 
 objcflags = [
-  '-isysroot', mac_sdk_path,
-  '-I', mac_sdk_path + '/usr/local/include',
-  '-fmodules',
   '-fobjc-arc',
   '-c',
 ]
