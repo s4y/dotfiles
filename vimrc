@@ -8,8 +8,6 @@ set shortmess+=I
 "     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin('~/.vim/plugged')
 
-Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'Sidnicious/vim-lasso'
 Plug 'Valloric/YouCompleteMe'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-scripts/bufexplorer.zip'
@@ -18,6 +16,7 @@ Plug 'wincent/Command-T'
 Plug 'fatih/vim-go'
 Plug 'vim-scripts/fugitive.vim'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'tikhomirov/vim-glsl'
 
 call plug#end()
 filetype plugin indent on
