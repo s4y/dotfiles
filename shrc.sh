@@ -31,8 +31,12 @@ export CLICOLOR=1
 export LSCOLORS=Cxfxcxdxbxcedeabagacad
 export EDITOR=vim
 export PAGER='less -SF'
-# Omit commands beginning with a space from command history. Useful for command lines with passwords.
-export HISTIGNORE=" *"
+
+# Thanks to https://sanctum.geek.nz/arabesque/better-bash-history/
+shopt -s histappend
+HISTFILESIZE=16384
+HISTSIZE=16384
+HISTCONTROL=ignoreboth
 
 # When including this from a box-specific .bash_profile, set PROMPT_COLOR and ORNAMENT_COLOR at will
 if [[ -n $ZSH_VERSION ]]; then
